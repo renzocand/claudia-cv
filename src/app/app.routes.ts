@@ -9,6 +9,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
     { path: 'educacion', component: EducacionComponent },
     { path: 'experiencia', component: ExperienciaComponent },
     { path: 'referencia', component: ReferenciasComponent },

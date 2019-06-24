@@ -2,11 +2,23 @@
     min-height: 100vh;
 }
 
+.puntero{
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    background: #494E5F;
+    border: 1px solid #494E5F;
+    color: #fff;
+}
+.btn.btn-primary:hover {
+    color: #494E5F;
+    border: 1px solid #494E5F;
+}
+
+
 /* SECCION IDIOMAS */
 .section-idiomas{
-    /* background-image: url("assets/images/bg-estudio.jpg");
-    background-size: cover;
-    background-repeat: no-repeat; */
     padding: 150px 0;
 }
 
@@ -14,7 +26,6 @@
     color:#979797!important;
 }
 .section-idiomas h1 {
-    /* color:white!important; */
     background-color:#FFE7D4!important;
 
 }
@@ -23,7 +34,6 @@
     padding: 0;
 }
 .section-idiomas ul li{
-    /* color:white!important; */
     margin: 18px 0;
     font-size: 1.2rem;
     list-style: none;
@@ -48,6 +58,26 @@
 }
 .section-experiencia ul li{
     margin: 10px 0;
+}
+
+
+/* SECCION REFERENCIAS */
+.section-referencias{
+    background-color: #494E5F;
+    padding: 150px 0;
+}
+.section-referencias .wraper{
+    background-color: white;
+    padding: 100px ;
+}
+.section-referencias ul{
+    padding: 0;
+}
+.section-referencias ul li{
+    /* color:white!important; */
+    margin: 10px 0;
+    font-size: 1.1rem;
+    list-style: none;
 }
 
 agm-map {
