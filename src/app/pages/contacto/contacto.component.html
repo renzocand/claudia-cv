@@ -1,0 +1,77 @@
+<section class="ftco-section contact-section animated fadeIn fast">
+  <div class="container">
+    <div class="row d-flex mb-5 contact-info">
+      <div class="col-md-12 mb-4">
+        <h2 class="h4 font-weight-bold">Información de contácto</h2>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-md-5">
+        <p>
+          Dirección:<b class="mx-2">Av. Gregorio Escobedo 558, Jesús María</b>
+        </p>
+      </div>
+      <div class="col-md-3">
+        <p>Teléfono:<b class="mx-2">+51 989 285 818</b></p>
+      </div>
+      <div class="col-md-4">
+        <p>Email:<b class="mx-2">c.cespedesgonzalez@alum.up.edu.pe</b></p>
+      </div>
+    </div>
+    <div class="row block-9">
+      
+      <div class="col-md-6 order-md-last pr-md-5 ">
+        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Su Nombre"
+              formControlName="nombre"
+              [ngClass]="{ 'is-invalid': submitted && f.nombre.errors }"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Su Correo"
+              formControlName="correo"
+              [ngClass]="{ 'is-invalid': submitted && f.correo.errors }"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Asunto"
+              formControlName="asunto"
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              cols="30"
+              rows="7"
+              class="form-control"
+              placeholder="Mensaje"
+              formControlName="mensaje"
+              [ngClass]="{ 'is-invalid': submitted && f.mensaje.errors }"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <input
+              type="submit"
+              value="Send Message"
+              class="btn btn-primary py-3 px-5"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-6 animated fadeIn ">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+</section>

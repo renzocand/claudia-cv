@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,ElementRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'claudia';
+
+  constructor(private elementRef:ElementRef){
+
+  }
+  ngAfterViewInit() {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "../../../assets/js/main.js";
+    this.elementRef.nativeElement.appendChild(s);
+  }
+ 
 }

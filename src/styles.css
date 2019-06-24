@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+.fullHeight{
+    min-height: 100vh;
+}
+
+/* SECCION IDIOMAS */
+.section-idiomas{
+    /* background-image: url("assets/images/bg-estudio.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    padding: 150px 0;
+}
+
+.section-idiomas p{
+    color:#979797!important;
+}
+.section-idiomas h1 {
+    /* color:white!important; */
+    background-color:#FFE7D4!important;
+
+}
+
+.section-idiomas ul{
+    padding: 0;
+}
+.section-idiomas ul li{
+    /* color:white!important; */
+    margin: 18px 0;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+/* SECCION EXPERIENCIA */
+.section-experiencia{
+    background-color: #494E5F;
+    padding: 150px 0;
+}
+
+.section-experiencia p{
+    color:#979797!important;
+    font-size: 1.1rem;
+}
+.section-experiencia h1, .section-experiencia h2 {
+    color:#FFE7D4!important;
+}
+
+.section-experiencia ul{
+    /* padding: 0; */
+}
+.section-experiencia ul li{
+    margin: 10px 0;
+}
+
+agm-map {
+    height: 300px;
+  }
+
+
+@media (max-width: 767.98px) { 
+    .mt-cel{
+        margin-top: 80px ;
+    }
+ }
+
