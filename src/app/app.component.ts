@@ -1,5 +1,6 @@
-import { Component,ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
+declare function principalMain():any
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,14 @@ import { Component,ElementRef } from '@angular/core';
 export class AppComponent {
   title = 'claudia';
 
-  constructor(private elementRef:ElementRef){
-
+  constructor(){
+    principalMain()
   }
-  ngAfterViewInit() {
-    var s = document.createElement("script");
-    s.type = "text/javascript";
-    s.src = "../../../assets/js/main.js";
-    this.elementRef.nativeElement.appendChild(s);
-  }
+  // ngAfterViewChecked() {
+  //   var s = document.createElement("script");
+  //   s.type = "text/javascript";
+  //   s.src = "../../../assets/js/main.js";
+  //   this.elementRef.nativeElement.appendChild(s);
+  // }
  
 }

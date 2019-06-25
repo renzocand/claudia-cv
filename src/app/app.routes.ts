@@ -8,6 +8,7 @@ import { ReferenciasComponent } from './pages/referencias/referencias.component'
 import { ContactoComponent } from './pages/contacto/contacto.component';
 
 const routes: Routes = [
+    // { path: '', redirectTo: 'home', pathMatch: 'full'  },
     { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
     { path: 'educacion', component: EducacionComponent },

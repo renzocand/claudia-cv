@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UsuariosService } from '../../services/usuarios.service';
 
 
 @Component({
@@ -15,7 +16,9 @@ export class ContactoComponent {
   
   form:FormGroup
 
-  constructor() { 
+  constructor(private _us:UsuariosService) { 
+
+
     this.form = new FormGroup({
       'nombre': new FormControl('', Validators.required),
       'correo': new FormControl('', Validators.required),
