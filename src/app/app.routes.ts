@@ -8,8 +8,7 @@ import { ReferenciasComponent } from './pages/referencias/referencias.component'
 import { ContactoComponent } from './pages/contacto/contacto.component';
 
 const routes: Routes = [
-    // { path: '', redirectTo: 'home', pathMatch: 'full'  },
-    { path: '', component: HomeComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full'  },
     { path: 'home', component: HomeComponent },
     { path: 'educacion', component: EducacionComponent },
     { path: 'experiencia', component: ExperienciaComponent },
@@ -19,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {useHash:true})],
     exports: [RouterModule]
 })
 export class AppRoutingModule {}

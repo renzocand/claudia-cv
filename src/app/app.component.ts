@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-declare function principalMain():any
+declare function mainFunction()
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,7 @@ export class AppComponent {
   title = 'claudia';
 
   constructor(){
-    principalMain()
+    mainFunction()
   }
   // ngAfterViewChecked() {
   //   var s = document.createElement("script");
