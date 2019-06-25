@@ -18,8 +18,11 @@
       </div>
     </div>
     <div class="row block-9">
-      
-      <div class="col-md-6 order-md-last pr-md-5 ">
+      <div  class="col-md-6 order-md-last pr-md-5 ">
+        <div *ngIf="envioCorrecto" class="alert alert-success" role="alert">
+          Su correo ha sido enviado correctamente, <br />Claudia pronto se
+          comunicará con usted
+        </div>
         <form (ngSubmit)="onSubmit()" [formGroup]="form">
           <div class="form-group">
             <input
@@ -38,6 +41,12 @@
               formControlName="correo"
               [ngClass]="{ 'is-invalid': submitted && f.correo.errors }"
             />
+            <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+              <div *ngIf="f.correo.errors.required">El correo es requerido</div>
+              <div *ngIf="f.correo.errors.pattern">
+                Ingrese un correo válido
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <input
@@ -45,6 +54,7 @@
               class="form-control"
               placeholder="Asunto"
               formControlName="asunto"
+              [ngClass]="{ 'is-invalid': submitted && f.mensaje.errors }"
             />
           </div>
           <div class="form-group">
@@ -67,11 +77,12 @@
         </form>
       </div>
 
-      <div class="col-md-6 animated fadeIn ">
+      <div class="d-none d-md-block col-md-6 animated fadeIn ">
         <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
         </agm-map>
       </div>
+
     </div>
   </div>
 </section>

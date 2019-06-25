@@ -11,6 +11,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 
 import { AppRoutingModule } from './app.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -31,6 +33,7 @@ import { AgmCoreModule } from '@agm/core';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCbuiztgVyMsk6BwXgzH7KfmY3veU1QB5g'
     })
