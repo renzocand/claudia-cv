@@ -16,6 +16,23 @@
     border: 1px solid #494E5F;
 }
 
+.imagen-gris{
+    
+    filter: grayscale(70%);
+ 
+    -webkit-filter: grayscale(70%);
+     
+    transition:filter 0.4s;
+     
+    -webkit-transition:-webkit-filter 1s;
+}
+
+.imagen-gris:hover{
+
+    filter: grayscale(0);
+ 
+-webkit-filter: grayscale(0);
+}
 
 /* SECCION IDIOMAS */
 .section-idiomas{
